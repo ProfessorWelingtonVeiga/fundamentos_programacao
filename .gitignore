@@ -1,0 +1,108 @@
+openFrameworksLog In
+Recommended .gitignore for oF &amp; CodeBlocks
+mingw (windows)
+Recommended .gitignore for oF &amp; CodeBlocks
+mingw (windows)
+Aug 2013
+2 / 4
+Aug 2013
+Dec 1969
+ 
+jesses.co.ttAug '13
+Hi,
+
+This is the first time that I am using oF, CodeBlocks, and Git on Windows, and I'm wondering if anyone has any best practices / templates for the .gitignore file ??
+
+Thanks,
+
+Jesse
+
+
+
+created
+Aug '13
+last reply
+3
+replies
+1.9k
+views
+3
+users
+1
+like
+
+
+LeoColombAug '131 
+Hi! 
+Try this:
+
+#################  
+## openFrameworks  
+#################  
+
+[Bb]in/*  
+![Bb]in/data/  
+[Bb]uild/  
+[Oo]bj/  
+*.o  
+[Dd]ebug*/  
+[Rr]elease*/  
+*.mode*  
+*.app/  
+*.pyc  
+*.log  
+
+#################  
+## Code::Blocks  
+#################  
+
+*.depend  
+*.layout  
+
+############  
+## Windows  
+############  
+
+# Windows image file caches  
+Thumbs.db  
+
+# Folder config file  
+Desktop.ini
+If your project generate some files and you want to ignore them, you can add them in this .gitignore.
+I.e.:
+
+... (previous code)  
+my_file.ext
+1 Like
+
+jesses.co.ttAug '13
+Sweet, thanks Leo!
+
+
+16 DAYS LATER
+
+evscAug '13
+Excellent. Thanks for this.
+
+
+Reply
+Suggested Topics
+Topic	Category	Replies	Views	Activity
+How to securely delete an ofThread subclass	
+mingw (windows)
+0	377	Sep '15
+XCode to CodeBlocks OF 0.8.4 Errors	
+mingw (windows)
+0	383	Sep '15
+Problem with QT for windows and namespaces	
+mingw (windows)
+0	115	May 12
+Qt Creator (windows): RangeError: Maximum call stack size exceeded	
+mingw (windows)
+5	480	May 23
+Build errors CodeBlocks	
+mingw (windows)
+0	347	Aug '15
+Want to read more? Browse other topics in 
+mingw (windows)
+ or view latest topics.
